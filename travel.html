@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Travel | aRiZone</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body class="travel">
+    <header class="site-header">
+      <div class="site-header__inner">
+        <a class="logo" href="index.html">aRiZone</a>
+        <input class="nav-toggle" id="nav-toggle" type="checkbox" />
+        <label class="nav-toggle-btn" for="nav-toggle" aria-label="打开菜单">≡</label>
+        <nav aria-label="主导航">
+          <ul class="nav-list">
+            <li><a href="index.html">首页 Home</a></li>
+            <li><a href="diary.html">日志 Diary</a></li>
+            <li><a href="travel.html" aria-current="page">Travel</a></li>
+            <li><a href="guestbook.html">留言本</a></li>
+            <li><a href="about.html">关于我</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="travel-stage">
+      <section class="world-map" id="world-map" aria-label="互动世界地图">
+        <div class="world-map__inner" id="world-map-inner">
+          <img src="img/world-map.jpg" alt="粉色世界地图" draggable="false" />
+        </div>
+        <!-- 左下角问号：点击查看使用说明 -->
+        <button class="map-help-btn is-wiggling" id="map-help-btn" type="button" aria-label="使用说明">
+          <img src="img/help-q.png" alt="" draggable="false" />
+        </button>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>&copy; 2026 aRiZone</p>
+      <p>
+        <a href="index.html">首页</a> ·
+        <a href="about.html">关于我</a> ·
+        <a href="guestbook.html">留言本</a>
+      </p>
+    </footer>
+    <!-- 旗子日志弹窗（查看态/编辑态共用同一个容器） -->
+    <div class="flag-editor-backdrop" id="flag-editor" hidden>
+      <div class="flag-editor" role="dialog" aria-modal="true" aria-label="旅行日志">
+        <button class="flag-editor__close" id="flag-close" type="button" aria-label="关闭">×</button>
+
+        <!-- 查看态：只读展示 -->
+        <div id="flag-view" hidden>
+          <h2 class="flag-editor__heading" id="flag-view-title">旅行日志</h2>
+          <p class="flag-editor__view-text" id="flag-view-text"></p>
+          <div class="flag-editor__thumbs" id="flag-view-thumbs" hidden></div>
+          <div class="flag-editor__actions">
+            <button id="flag-edit-btn" type="button">编辑</button>
+          </div>
+        </div>
+
+        <!-- 编辑态：可修改 -->
+        <div id="flag-edit-form">
+          <h2 class="flag-editor__heading">编辑旅行日志 🚩</h2>
+          <input id="flag-title" type="text" placeholder="地点或标题" maxlength="60" />
+          <textarea id="flag-text" rows="5" placeholder="写下这段旅程…" maxlength="2000"></textarea>
+          <div class="flag-editor__thumbs" id="flag-thumbs"></div>
+          <div class="flag-editor__actions">
+            <label class="flag-editor__upload" for="flag-images">上传图片</label>
+            <input id="flag-images" type="file" accept="image/*" multiple hidden />
+            <button id="flag-save" type="button">保存</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 使用说明弹窗（蛋糕边框样式） -->
+    <div class="map-help-backdrop" id="map-help" hidden>
+      <div class="map-help" role="dialog" aria-modal="true" aria-label="使用说明">
+        <h2 class="map-help__title">使用说明^^</h2>
+        <div class="map-help__body">
+          <p>这是一个世界地图日志，将鼠标光标悬停到想记录的位置保持不动，地图会逐渐放大，拖动地图后双击鼠标，会出现一个小旗子，点击小旗子会出现一个弹窗，可以记录旅游的经理心情等等。</p>
+          <p>保存后也会储存到日志当中，再次点击旗子也可以观看啦^v^</p>
+        </div>
+        <button class="map-help__close" id="map-help-close" type="button">关闭</button>
+      </div>
+    </div>
+    <script src="js/travel-map.js?v=5" defer></script>
+  </body>
+</html>

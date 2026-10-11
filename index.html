@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>首页 | aRiZone</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body class="home">
+    <header class="site-header">
+      <div class="site-header__inner">
+        <a class="logo" href="index.html">aRiZone</a>
+        <input class="nav-toggle" id="nav-toggle" type="checkbox" />
+        <label class="nav-toggle-btn" for="nav-toggle" aria-label="打开菜单">≡</label>
+        <nav aria-label="主导航">
+          <ul class="nav-list">
+            <li><a href="index.html" aria-current="page">首页 Home</a></li>
+            <li><a href="diary.html">日志 Diary</a></li>
+            <li><a href="travel.html">Travel</a></li>
+            <li><a href="guestbook.html">留言本</a></li>
+            <li><a href="about.html">关于我</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="home-switch">
+      <section id="home-welcome" class="page-view page-view--welcome">
+        <img
+          class="home-banner"
+          src="img/welcome.png"
+          alt="Welcome to aRiZone"
+          role="button"
+          tabindex="0"
+          title="点击进入"
+        />
+        <img class="home-gif" src="img/PPG.gif" alt="飞天小女警" />
+      </section>
+      <section id="home-second" class="page-view page-view--second is-hidden">
+        <img class="second-banner" src="img/second-top.png" alt="Understand me" />
+        <div class="second-notepad">
+          <img src="img/second-notepad.jpg" alt="记事本窗口" />
+          <div class="second-notepad__text">
+            <p>这是一个个人网站TvT 持续更新中！目前是最初版本。想在里面塞一些收藏的东西（不限于出去玩记录帖、旅行记录、好笑的梗图、等等）这样大概就可以赛博永生了吧^^（开玩笑）</p>
+            <p>有一个留言本我本希望可以做出公共留言区域，但ds说要搞一个服务器Σ(っ °Д °;)っ目前貌似比较难实现，我再研究一下。！</p>
+            <p>然后这个travel地图，可以点击选定的区域进行日记发表~ 目前还在摸索阶段，与大家共勉。</p>
+          </div>
+        </div>
+        <div class="second-bottom">
+          <img class="second-gif" src="img/twinsbyartwork.gif" alt="双子星" />
+          <p class="second-hint">点击此处返回欢迎页</p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>&copy; 2026 aRiZone</p>
+      <p>
+        <a href="index.html">首页</a> ·
+        <a href="about.html">关于我</a> ·
+        <a href="guestbook.html">留言本</a>
+      </p>
+    </footer>
+    <script src="js/home.js" defer></script>
+  </body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>日志 Diary | aRiZone</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body class="diary">
+    <header class="site-header">
+      <div class="site-header__inner">
+        <a class="logo" href="index.html">aRiZone</a>
+        <input class="nav-toggle" id="nav-toggle" type="checkbox" />
+        <label class="nav-toggle-btn" for="nav-toggle" aria-label="打开菜单">≡</label>
+        <nav aria-label="主导航">
+          <ul class="nav-list">
+            <li><a href="index.html">首页 Home</a></li>
+            <li><a href="diary.html" aria-current="page">日志 Diary</a></li>
+            <li><a href="travel.html">Travel</a></li>
+            <li><a href="guestbook.html">留言本</a></li>
+            <li><a href="about.html">关于我</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="page diary-page">
+      <!-- 第一块：个人信息区 -->
+      <section class="diary-profile">
+        <img class="diary-avatar" src="img/kaokorilakkuma.gif" alt="头像" />
+        <h1 class="diary-name">aRi</h1>
+        <p class="diary-bio">写写日常，记记旅行 ♪</p>
+      </section>
+
+      <!-- 第二块：发帖区 -->
+      <section class="diary-composer" aria-label="写日记">
+        <textarea id="diary-text" rows="4" placeholder="今天发生了什么…" maxlength="2000"></textarea>
+        <div class="diary-composer__row">
+          <select id="diary-weather" aria-label="天气">
+            <option value="☀️">☀️ 晴</option>
+            <option value="⛅">⛅ 多云</option>
+            <option value="☁️">☁️ 阴</option>
+            <option value="🌧️">🌧️ 雨</option>
+          </select>
+          <input id="diary-place" type="text" placeholder="地点" maxlength="30" />
+        </div>
+        <div class="diary-composer__actions">
+          <label class="diary-upload-btn" for="diary-image">上传图片</label>
+          <input id="diary-image" type="file" accept="image/*" hidden />
+          <button id="diary-send" type="button">发表</button>
+          <span class="diary-composer__file" id="diary-file-name"></span>
+        </div>
+      </section>
+
+      <!-- 第三块：日记列表 -->
+      <section class="diary-list" id="diary-list" aria-label="日记列表"></section>
+    </main>
+
+    <footer class="site-footer">
+      <p>&copy; 2026 aRiZone</p>
+      <p>
+        <a href="index.html">首页</a> ·
+        <a href="about.html">关于我</a> ·
+        <a href="guestbook.html">留言本</a>
+      </p>
+    </footer>
+    <script src="js/diary.js" defer></script>
+  </body>
+</html>

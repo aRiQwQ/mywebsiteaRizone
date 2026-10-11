@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>留言本 | aRiZone</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="site-header__inner">
+        <a class="logo" href="index.html">aRiZone</a>
+        <input class="nav-toggle" id="nav-toggle" type="checkbox" />
+        <label class="nav-toggle-btn" for="nav-toggle" aria-label="打开菜单">≡</label>
+        <nav aria-label="主导航">
+          <ul class="nav-list">
+            <li><a href="index.html">首页 Home</a></li>
+            <li><a href="diary.html">日志 Diary</a></li>
+            <li><a href="travel.html">Travel</a></li>
+            <li><a href="guestbook.html" aria-current="page">留言本</a></li>
+            <li><a href="about.html">关于我</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="page">
+      <figure class="about-window">
+        <img src="img/about-window.jpg" alt="复古聊天窗口" />
+        <div class="about-window__chat">
+          <h1>留言本</h1>
+          <ul class="chat-list" id="chat-list"></ul>
+        </div>
+        <div class="about-window__input">
+          <input
+            id="chat-text"
+            type="text"
+            placeholder="说点什么…"
+            maxlength="200"
+            autocomplete="off"
+          />
+          <button id="chat-send" type="button">发送</button>
+        </div>
+      </figure>
+    </main>
+
+    <footer class="site-footer">
+      <p>&copy; 2026 aRiZone</p>
+      <p>
+        <a href="index.html">首页</a> ·
+        <a href="about.html">关于我</a> ·
+        <a href="guestbook.html">留言本</a>
+      </p>
+    </footer>
+    <script src="js/guestbook.js" defer></script>
+  </body>
+</html>

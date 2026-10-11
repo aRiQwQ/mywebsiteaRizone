@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>关于我 | aRiZone</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body class="about">
+    <header class="site-header">
+      <div class="site-header__inner">
+        <a class="logo" href="index.html">aRiZone</a>
+        <input class="nav-toggle" id="nav-toggle" type="checkbox" />
+        <label class="nav-toggle-btn" for="nav-toggle" aria-label="打开菜单">≡</label>
+        <nav aria-label="主导航">
+          <ul class="nav-list">
+            <li><a href="index.html">首页 Home</a></li>
+            <li><a href="diary.html">日志 Diary</a></li>
+            <li><a href="travel.html">Travel</a></li>
+            <li><a href="guestbook.html">留言本</a></li>
+            <li><a href="about.html" aria-current="page">关于我</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="page">
+      <!-- 第一区域：个人信息（左右两栏） -->
+      <section class="about-hero">
+        <div class="about-left">
+          <img class="about-avatar" src="img/about-avatar.png" alt="aRi 的头像" />
+          <h1 class="about-nick">aRi</h1>
+          <p class="about-gender">性别：女</p>
+          <div class="about-info-card">
+            <h2 class="about-card-title">基本信息</h2>
+            <!-- 占位内容：直接改成你的信息即可 -->
+            <ul class="about-info-list">
+              <li><span>姓名</span><b>dyx</b></li>
+              <li><span>年龄</span><b>18岁</b></li>
+              <li><span>星座</span><b>天蝎座</b></li>
+              <li><span>所在地</span><b>北京</b></li>
+            </ul>
+            <h2 class="about-card-title">联系方式</h2>
+            <ul class="about-info-list">
+              <li><span>邮箱</span><b>2661846049@qq.com</b></li>
+              <li><span>微信</span><b>aRi_Voasem_koi98</b></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="about-right">
+          <img
+            class="about-photo"
+            src="img/about-photo.jpg"
+            alt="草莓与小老鼠插画"
+          />
+          <div class="about-btns">
+            <a class="btn-pink-solid" href="#">查看图集</a>
+            <a class="btn-pink-ghost" href="guestbook.html">给我留言</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- 第二区域：三个功能入口卡片 -->
+      <section class="about-entries">
+        <article class="entry-card">
+          <h2>我的相册</h2>
+          <p>记录生活中的精彩瞬间，分享我的日常点滴。</p>
+          <a class="btn-entry" href="#">去看看</a>
+        </article>
+        <article class="entry-card">
+          <h2>兴趣爱好</h2>
+          <p>了解我的兴趣爱好，看看我们有什么共同点。</p>
+          <a class="btn-entry" href="#">去看看</a>
+        </article>
+        <article class="entry-card">
+          <h2>留言板</h2>
+          <p>有什么想说的？在这里给我留言吧！</p>
+          <a class="btn-entry" href="guestbook.html">去留言</a>
+        </article>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>&copy; 2026 aRiZone</p>
+      <p>
+        <a href="index.html">首页</a> ·
+        <a href="about.html">关于我</a> ·
+        <a href="guestbook.html">留言本</a>
+      </p>
+    </footer>
+  </body>
+</html>
